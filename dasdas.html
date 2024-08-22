@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuous Scrolling Images with Text</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .scroll-container {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            position: relative;
+            height: 150px; /* Adjust height based on image size */
+            border-bottom: 2px solid #ddd; /* Optional border for visual separation */
+        }
+
+        .scrolling-content {
+            display: inline-flex;
+            white-space: nowrap;
+            width: 200%; /* Adjust to ensure the content repeats enough times */
+        }
+
+        .scrolling-content img {
+            height: 100%; /* Adjust as needed */
+            width: 150px; /* Adjust size based on your images */
+            display: inline-block;
+            margin-right: 10px; /* Space between images */
+        }
+
+        .scrolling-content span {
+            display: inline-block;
+            height: 100%;
+            line-height: 150px; /* Adjust based on image height */
+            margin-right: 30px; /* Space between text and images */
+        }
+
+        .scroll-container:first-of-type .scrolling-content {
+            animation: scroll-left 5s linear infinite; /* Scrolling from right to left */
+        }
+
+        .scroll-container:nth-of-type(2) .scrolling-content {
+            animation: scroll-right 5s linear infinite; /* Scrolling from left to right */
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes scroll-right {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="scroll-container">
+                    <div class="scrolling-content">
+                        <!-- Repeat images and text here -->
+                        <img src="https://via.placeholder.com/150" alt="Image 1">
+                        <span>Text 1</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 2">
+                        <span>Text 2</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 3">
+                        <span>Text 3</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 4">
+                        <span>Text 4</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 5">
+                        <span>Text 5</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 6">
+                        <span>Text 6</span>
+                        <!-- Duplicate content for continuous scroll effect -->
+                        <img src="https://via.placeholder.com/150" alt="Image 1">
+                        <span>Text 1</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 2">
+                        <span>Text 2</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 3">
+                        <span>Text 3</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 4">
+                        <span>Text 4</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 5">
+                        <span>Text 5</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 6">
+                        <span>Text 6</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="scroll-container">
+                    <div class="scrolling-content">
+                        <!-- Repeat images and text here -->
+                        <img src="https://via.placeholder.com/150" alt="Image 1">
+                        <span>Text 1</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 2">
+                        <span>Text 2</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 3">
+                        <span>Text 3</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 4">
+                        <span>Text 4</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 5">
+                        <span>Text 5</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 6">
+                        <span>Text 6</span>
+                        <!-- Duplicate content for continuous scroll effect -->
+                        <img src="https://via.placeholder.com/150" alt="Image 1">
+                        <span>Text 1</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 2">
+                        <span>Text 2</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 3">
+                        <span>Text 3</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 4">
+                        <span>Text 4</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 5">
+                        <span>Text 5</span>
+                        <img src="https://via.placeholder.com/150" alt="Image 6">
+                        <span>Text 6</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
