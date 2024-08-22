@@ -524,6 +524,60 @@ text-align: center;
 .accordion-body {
     font-size: 22px;
 }
+.card {
+    width: 1000px; /* Width of the card */
+    height: 350px !important; /* Height of the card */
+    background-color: #FFFFFF;
+    display: inline-block;
+    margin-right: 20px; /* Space between cards */
+    border: 1px solid #ddd; /* Optional border for better visual separation */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional shadow for depth effect */
+  }
+  .card span{
+    margin-right: 0 !important;
+  }
+  .card-content {
+    padding: 20px; /* Adjust padding as needed */
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .profile-icon {
+    width: 50px; /* Adjust size based on your design */
+    height: 50px; /* Adjust size based on your design */
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .username {
+    font-size: 18px; /* Adjust font size as needed */
+    font-weight: bold;
+  }
+  
+  .rating {
+    margin-bottom: 10px;
+  }
+  
+  .star {
+    margin: 0;
+    padding: 0;
+    color: #000000; /* Star color */
+    font-size: 18px; /* Adjust size as needed */
+  }
+  
+  .review p {
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.5;
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
 @keyframes scroll {
   0% {
     transform: translateX(0);
