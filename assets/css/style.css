@@ -94,12 +94,14 @@ body {
 
 /* Transparent navbar that overlays the video */
 .navbar {
-  background-color: transparent !important;
-  position: absolute !important;
-  width: 100% !important;
-  z-index: 3 !important;
-  font-size: 20px !important;
-}
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 100%) !important;
+    position: absolute !important;
+    width: 100% !important;
+    height: 93px;
+    z-index: 3 !important;
+    font-size: 20px !important;
+  }
+  
 
 .navbar.scrolled {
   background-color: rgba(0, 0, 0, 0.8) !important;
@@ -149,6 +151,8 @@ body {
   display: flex; /* Flexbox for centering text */
   align-items: center;
   justify-content: center;
+  width: 141px;
+  height: 50px;
   font-weight: bold; /* Bold text */
   transition: background-color 0.3s; /* Smooth background color transition */
 }
@@ -354,10 +358,22 @@ body {
   color: #ffffff;
 }
 .review-area {
-  margin-top: 100px;
-  background: #000000;
-  padding: 140px 0 140px;
-}
+    position: relative;
+    margin-top: 100px;
+    background-color: #000000;
+    padding: 140px 0;
+    overflow: hidden; /* Ensure the gradient doesn't overflow the section */
+  }
+  .review-area::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%; /* Adjust the height of the fade effect as needed */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 1) 100%);
+    pointer-events: none; /* Ensure the gradient doesn't interfere with interactions */
+  }
 
 .customer-review-wrapper {
   position: relative;
