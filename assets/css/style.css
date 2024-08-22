@@ -1,364 +1,608 @@
-@font-face {
-    font-family: "LufgaSemiBold";
-    src: url("../Fonts/Lufga/LufgaSemiBold.ttf");
+body {
+  background-color: #f5f4f9 !important ;
 }
 @font-face {
-    font-family: "LufgaRegular";
-    src: url("../Fonts/Lufga/LufgaRegular.ttf");
+  font-family: "LufgaSemiBold";
+  src: url("../Fonts/Lufga/LufgaSemiBold.ttf");
 }
+@font-face {
+  font-family: "LufgaRegular";
+  src: url("../Fonts/Lufga/LufgaRegular.ttf");
+}
+@font-face {
+    font-family: "InterSemiBold";
+    src: url("../Fonts/Inter/Inter_18pt-SemiBold.ttf");
+  }
+  @font-face {
+    font-family: "InterRegular";
+    src: url("../Fonts/Inter/Inter_18pt-Regular.ttf");
+  }
 .landing-section {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .landing-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 1) 100%);
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 70%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  z-index: 1;
 }
 
 .landing-section video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 .landing-text {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .landing-text h1 {
-    font-size: 170px;
-    margin: 0;
-    font-family: "LufgaSemiBold";
-
+  font-size: 170px;
+  margin: 0;
+  font-family: "LufgaSemiBold";
 }
 
 .text-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center; /* Center align the text within the container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center; /* Center align the text within the container */
 }
 
 .text-container h1 {
-    margin: 0;
-    font-family: "LufgaSemiBold";
-    font-size: 170px; /* Adjust size as needed */
+  margin: 0;
+  font-family: "LufgaSemiBold";
+  font-size: 170px; /* Adjust size as needed */
 }
 
 .text-container .additional-text {
-    font-size: 20px; /* Adjust size as needed */
-    margin-left: 20px; /* Space between the text elements */
+  font-size: 20px; /* Adjust size as needed */
+  margin-left: 20px; /* Space between the text elements */
 }
 
 .landing-text h1.move-right {
-    position: relative;
-    right: 79px; /* Adjust this value as needed */
-    text-align: left;
+  position: relative;
+  right: 79px; /* Adjust this value as needed */
+  text-align: left;
 }
 
 /* Transparent navbar that overlays the video */
 .navbar {
-    background-color: transparent !important;
-    position: absolute !important;
-    width: 100% !important;
-    z-index: 3 !important;
-    font-size: 20px !important;
+  background-color: transparent !important;
+  position: absolute !important;
+  width: 100% !important;
+  z-index: 3 !important;
+  font-size: 20px !important;
 }
 
 .navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.8) !important;
-    transition: background-color 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  transition: background-color 0.3s ease;
 }
 
 .navbar-nav {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .navbar-nav .nav-link {
-    color: #FFFFFF !important;
-    opacity: 0.8;
+  color: #ffffff !important;
+  opacity: 0.8;
+  font-size: 20px !important;
+  font-family: "LufgaRegular" !important;
+
 }
-.active{
-    opacity: 1 !important;
+.active {
+  opacity: 1 !important;
 }
 /* Styles for Join Us button */
 /* Navbar buttons container */
 .navbar-buttons {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Space between buttons */
-    margin-left: auto; /* Align buttons to the right */
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between buttons */
+  margin-left: auto; /* Align buttons to the right */
 }
 
 /* Common link styles */
 .navbar-buttons .nav-link {
-    color: #FFFFFF; /* Text color */
-    font-size: 20px; /* Font size */
-    text-decoration: none; /* Remove underline */
-    margin: 0; /* Remove default margin */
-    padding: 10px; /* Add some padding */
+  color: #ffffff; /* Text color */
+  font-size: 20px; /* Font size */
+  text-decoration: none; /* Remove underline */
+  margin: 0; /* Remove default margin */
+  padding: 10px; /* Add some padding */
 }
 /* Additional styles for the Join Us button */
 .btn-join-us {
-    background-color: #DCF247; /* Background color */
-    color: #000000; /* Text color */
-    padding: 10px 20px; /* Padding */
-    border-radius: 30px; /* Rounded corners */
-    font-size: 20px; /* Font size */
-    text-decoration: none; /* Remove underline */
-    display: flex; /* Flexbox for centering text */
-    align-items: center;
-    justify-content: center;
-    font-weight: bold; /* Bold text */
-    transition: background-color 0.3s; /* Smooth background color transition */
+  background-color: #dcf247; /* Background color */
+  color: #000000; /* Text color */
+  padding: 10px 20px; /* Padding */
+  border-radius: 30px; /* Rounded corners */
+  font-size: 20px; /* Font size */
+  text-decoration: none; /* Remove underline */
+  display: flex; /* Flexbox for centering text */
+  align-items: center;
+  justify-content: center;
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s; /* Smooth background color transition */
 }
 
 /* Hover effect for Join Us button */
 .btn-join-us:hover {
-    background-color: #c3d7a4; /* Lighter background on hover */
+  background-color: #c3d7a4; /* Lighter background on hover */
 }
 
 /* Animation for dynamic text */
 @keyframes slide-up-down {
-    0% {
-        opacity: 0;
-        transform: translateY(100%);
-    }
-    50% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
 }
 
 #dynamic-text {
-    display: inline-block;
-    animation: slide-up-down 1.5s ease-in-out both;
+  display: inline-block;
+  animation: slide-up-down 1.5s ease-in-out both;
 }
 
 /* Sound control styles */
 .sound-control {
-    position: fixed;
-    bottom: 70px;
-    right: 70px;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 4;
-    border-radius: 50%;
+  position: fixed;
+  bottom: 70px;
+  right: 70px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 4;
+  border-radius: 50%;
 }
 
 .sound-control i {
-    font-size: 40px;
-    color: white;
-    transition: transform 0.5s ease;
+  font-size: 40px;
+  color: white;
+  transition: transform 0.5s ease;
 }
 
 /* Circle container for text rotation */
 .text-rotation-container {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: rotate-text 10s linear infinite;
-    overflow: hidden; /* Hide overflow to ensure no extra space is shown */
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotate-text 10s linear infinite;
+  overflow: hidden; /* Hide overflow to ensure no extra space is shown */
 }
 
 .text-rotation-container span {
-    position: absolute;
-    font-size: 16px;
-    color: white;
-    white-space: nowrap;
-    line-height: 0; /* Remove any space caused by line height */
-    transform: translateX(-50%); /* Center text accurately */
+  position: absolute;
+  font-size: 16px;
+  color: white;
+  white-space: nowrap;
+  line-height: 0; /* Remove any space caused by line height */
+  transform: translateX(-50%); /* Center text accurately */
 }
 
-.text-rotation-container span:nth-child(1) { transform: rotate(0deg) translateX(100px); }
-.text-rotation-container span:nth-child(2) { transform: rotate(45deg) translateX(100px); }
-.text-rotation-container span:nth-child(3) { transform: rotate(90deg) translateX(100px); }
-.text-rotation-container span:nth-child(4) { transform: rotate(135deg) translateX(100px); }
-.text-rotation-container span:nth-child(5) { transform: rotate(180deg) translateX(100px); }
-.text-rotation-container span:nth-child(6) { transform: rotate(225deg) translateX(100px); }
-.text-rotation-container span:nth-child(7) { transform: rotate(270deg) translateX(100px); }
-.text-rotation-container span:nth-child(8) { transform: rotate(315deg) translateX(100px); }
+.text-rotation-container span:nth-child(1) {
+  transform: rotate(0deg) translateX(100px);
+}
+.text-rotation-container span:nth-child(2) {
+  transform: rotate(45deg) translateX(100px);
+}
+.text-rotation-container span:nth-child(3) {
+  transform: rotate(90deg) translateX(100px);
+}
+.text-rotation-container span:nth-child(4) {
+  transform: rotate(135deg) translateX(100px);
+}
+.text-rotation-container span:nth-child(5) {
+  transform: rotate(180deg) translateX(100px);
+}
+.text-rotation-container span:nth-child(6) {
+  transform: rotate(225deg) translateX(100px);
+}
+.text-rotation-container span:nth-child(7) {
+  transform: rotate(270deg) translateX(100px);
+}
+.text-rotation-container span:nth-child(8) {
+  transform: rotate(315deg) translateX(100px);
+}
 
 @keyframes rotate-text {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-.who{
-    background-color: #F5F4F9 ;
-    height: 100vh !important;
+.who {
+  height: 100vh !important;
 }
-.whoSupTitle{
- 
-    color: #000000;
-    font-size: 22px !important;
-    font-family: "LufgaRegular";
+.whoSupTitle {
+  color: #000000;
+  font-size: 22px !important;
+  font-family: "LufgaRegular";
 }
-.whoTitle{
-    color: #000000;
-    font-size: 52px !important;
-    font-family: "LufgaRegular";
+.whoTitle {
+  color: #000000;
+  font-size: 52px !important;
+  font-family: "LufgaRegular";
 }
-.whoTitle{
-    color: #000000;
-    font-size: 22px;
-    font-family: "LufgaRegular" !important;
+.WhoP {
+  color: #000000;
+  font-size: 22px;
+  font-family: "LufgaRegular" !important;
 }
 .scroll-container {
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
-    position: relative;
-    height: 100%; /* Adjust height based on image size */
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  height: 100%; /* Adjust height based on image size */
 }
 
 .scrolling-content {
-    display: inline-flex;
-    white-space: nowrap;
-    width: 200%; /* Adjust to ensure the content repeats enough times */
-    animation: scroll 8s linear infinite; /* Adjust the duration here for faster scrolling */
+  display: inline-flex;
+  white-space: nowrap;
+  width: 200%; /* Adjust to ensure the content repeats enough times */
+  animation: scroll 8s linear infinite; /* Adjust the duration here for faster scrolling */
 }
 
 .scrolling-content img {
-    height: 100%; /* Adjust as needed */
-    width: 150px; /* Adjust size based on your images */
-    display: inline-block;
-    margin-right: 10px; /* Space between images */
+  height: 100%; /* Adjust as needed */
+  width: 150px; /* Adjust size based on your images */
+  display: inline-block;
+  margin-right: 10px; /* Space between images */
 }
 
 .scrolling-content span {
-    display: inline-block;
-    height: 100%;
-    line-height: 150px; /* Adjust based on image height */
-    margin-right: 30px; /* Space between text and images */
+  display: inline-block;
+  height: 100%;
+  line-height: 150px; /* Adjust based on image height */
+  margin-right: 30px; /* Space between text and images */
+}
+.callSupTitle {
+  color: #000000;
+  font-size: 22px !important;
+  font-family: "LufgaRegular";
+}
+.callTitle {
+  color: #000000;
+  font-size: 52px !important;
+  font-family: "LufgaRegular";
+}
+.callP {
+  color: #000000;
+  font-size: 22px !important;
+  font-family: "LufgaRegular";
+}
+.btn-primary:hover {
+    background-color: #000000 !important;
+    color: #C3C8CB !important;
+    transition: 0.5s;
+}
+.btn-primary{
+   
+    background-color: transparent !important;
+  border: 1px solid #000000 !important;
+  width: 370px !important;
+  height: 70px !important;
+  border-radius: 85px !important;
+  font-size: 21.33px !important;
+  font-family: "LufgaRegular" !important;
+  color: #000000 !important;
+  margin-bottom: 10px;
+}
+.btn-success{
+   
+    background-color: transparent !important;
+    border: 1px solid #FFFFFF !important;
+    width: 370px !important;
+    height: 70px !important;
+    border-radius: 85px !important;
+    font-size: 21.33px !important;
+    font-family: "LufgaRegular" !important;
+    color: #FFFFFF !important;
+    margin-bottom: 150px;
+}
+.section-title h2 {
+  color: #ffffff;
+  font-size: 52px;
+}
+.section-title p {
+  font-family: "LufgaRegular" !important;
+  font-size: 22px;
+  color: #ffffff;
+}
+.review-area {
+  margin-top: 100px;
+  background: #000000;
+  padding: 140px 0 140px;
 }
 
+.customer-review-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 1080px;
+}
+
+.customer-review-wrapper::before,
+.customer-review-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 62px;
+  width: 100%;
+  /* background: linear-gradient(0deg, #F6F5F3 0%, rgba(246, 245, 243, 0.00) 100%); */
+  z-index: 10;
+}
+
+.customer-review-wrapper::before {
+  bottom: auto;
+  top: 0;
+  /* background: linear-gradient(180deg, #F6F5F3 0%, rgba(246, 245, 243, 0.00) 100%); */
+}
+
+.review-item-wrap {
+  animation: friskTestimonialScroll 30s linear infinite;
+  transition: all 0.5s ease-in;
+  animation-duration: 30s;
+}
+
+.review-item-wrap:hover {
+  animation-play-state: paused;
+}
+
+@keyframes friskTestimonialScroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+.review-item {
+  background: #f5f4f9 !important;
+  padding: 40px 35px 25px;
+  margin-bottom: 25px;
+  border-radius: 26.67px;
+}
+
+.review-item .rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 18px;
+}
+
+.review-item .title {
+  font-size: 26px;
+font-family:"LufgaSemiBold";
+  margin-bottom: 20px;
+}
+
+.review-item .title span {
+  font-family: var(--tg-body-font-family);
+  font-weight: 400;
+}
+
+.review-item p {
+    color: #000000;
+  margin-bottom: 40px;
+  font-size: 25px;
+  font-family:"LufgaRegular";
+}
+
+.review-item > span {
+  color: rgba(10, 12, 0, 0.6);
+  display: block;
+  font-size: 18px;
+  border-top: 1px solid #cececc;
+  padding-top: 10px;
+  font-family:"LufgaRegular";
+
+}
+.ED{
+    font-size: 22px;
+    font-family: "LufgaRegular" !important;
+text-align: center;
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+.Sucss{
+    font-size: 52px;
+    font-family: "LufgaRegular" !important;
+text-align: center;
+    color: #FFFFFF;
+}
+.faq-title {
+    font-size: 52px;
+    font-family: "LufgaRegular" !important;
+
+    line-height: 1.2;
+}
+.accordion-item{
+    background-color: transparent !important;
+    border: none !important;
+}
+.accordion-header{
+    background-color: transparent !important;
+    border: none !important;
+    
+}
+.faqP{
+   font-size: 22px;
+   color: #000000;
+   font-family: "InterSemiBold" !important;
+}
+.accordion-body p{
+    font-size: 22px;
+    color: #000000;
+    font-family: "InterRegular" !important;
+}
+.accordion-item .accordion-button{
+    background-color: transparent !important;
+    border-bottom: 1px solid #C3C8CB !important;
+}
+.accordion-button {
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    color: #000; /* Change this color as needed */
+    padding-left: 0;
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+.accordion-button::after {
+    content: '\f078'; /* Unicode for down arrow */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+.accordion-button.collapsed::after {
+    transform: rotate(0);
+}
+.accordion-body {
+    font-size: 22px;
+}
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes scroll-left-to-right {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Right to Left Scrolling */
 .scroll-right-to-left {
-    animation: scroll-right-to-left 5s linear infinite;
+  animation: scroll-right-to-left 5s linear infinite;
 }
 
 @keyframes scroll-right-to-left {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(50%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
 }
 
 .scroll-row {
-    margin-bottom: 10px; /* Space between rows */
+  margin-bottom: 10px; /* Space between rows */
 }
 @media (max-width: 768px) {
-    .navbar-buttons {
-        display: flex;
-        flex-direction: column;
-        margin-top: 15px; /* Space above buttons */
-    }
+  .call {
+    margin-top: 650px !important;
+  }
+  .navbar-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px; /* Space above buttons */
+  }
 
-    .navbar-buttons .nav-link {
-        font-size: 18px;
-    }
+  .navbar-buttons .nav-link {
+    font-size: 18px;
+  }
 
-    .btn-join-us {
-        margin-top: 10px; /* Space above Join Us button */
-    }
-    .landing-text h1 {
-        font-size: 80px;
-    }
-    .text-container h1 {
-        font-size: 60px !important;
-    }
+  .btn-join-us {
+    margin-top: 10px; /* Space above Join Us button */
+  }
+  .landing-text h1 {
+    font-size: 80px;
+  }
+  .text-container h1 {
+    font-size: 60px !important;
+  }
 
-    .text-container .additional-text {
-        font-size: 30px;
-    }
+  .text-container .additional-text {
+    font-size: 30px;
+  }
 
-    .navbar-nav {
-        margin-left: 0;
-    }
-    .navbar-brand img {
-        width: 150px !important;
-    }
-    .move-right {
-        right: 0 !important;
-        text-align: center !important;
-    }
-    .sound-control {
-        bottom: 18px;
-    }
-    #dynamic-text{
-        display: block !important;
-    }
+  .navbar-nav {
+    margin-left: 0;
+  }
+  .navbar-brand img {
+    width: 150px !important;
+  }
+  .move-right {
+    right: 0 !important;
+    text-align: center !important;
+  }
+  .sound-control {
+    bottom: 18px;
+  }
+  #dynamic-text {
+    display: block !important;
+  }
+  #myVideo{
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 576px) {
-    .text-container h1 {
-        font-size: 60px ;
-    }
+  .text-container h1 {
+    font-size: 60px;
+  }
 
-    .text-container .additional-text {
-        font-size: 24px;
-    }
+  .text-container .additional-text {
+    font-size: 24px;
+  }
 }
 @media (max-width: 992px) {
-    .navbar-buttons {
-        display: none; /* Hide buttons in mobile view */
-    }
+  .navbar-buttons {
+    display: none; /* Hide buttons in mobile view */
+  }
 }

@@ -40,3 +40,20 @@ soundControl.addEventListener('click', () => {
         video.muted = true;
     }
 });
+
+
+const videoo = document.getElementById('myVideo');
+const playButton = document.getElementById('playButton');
+
+playButton.addEventListener('click', function () {
+    videoo.play();
+    playButton.style.display = 'none';
+});
+
+videoo.addEventListener('pause', function () {
+    playButton.style.display = 'block';
+});
+
+videoo.addEventListener('play', function () {
+    playButton.style.display = 'none';
+});
