@@ -1,0 +1,274 @@
+body {
+    background-color: #000000 !important ;
+  }
+  @font-face {
+    font-family: "LufgaSemiBold";
+    src: url("/assets/Fonts/Lufga/LufgaSemiBold.ttf");
+  }
+  @font-face {
+    font-family: "LufgaRegular";
+    src: url("/assets/Fonts/Lufga/LufgaRegular.ttf");
+  }
+  @font-face {
+      font-family: "InterSemiBold";
+      src: url("/assets/Fonts/Inter/Inter_18pt-SemiBold.ttf");
+    }
+    @font-face {
+      font-family: "InterRegular";
+      src: url("/assets/Fonts/Inter/Inter_18pt-Regular.ttf");
+    }
+    @font-face {
+      font-family: "RecoletaMedium";
+      src: url("/assets/Fonts/Recoleta/Recoleta-Medium.ttf");
+    }
+    @font-face {
+        font-family: "InterRegular";
+        src: url("/assets/Fonts/Inter/Inter_18pt-Regular.ttf");
+      }
+.navbar {
+    background: transparent;
+    position: relative !important;
+    width: 100% !important;
+    height: 93px;
+    z-index: 3 !important;
+    font-size: 20px !important;
+  }
+  
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  opacity: 0.8;
+  font-size: 20px !important;
+  font-family: "LufgaRegular" !important;
+
+}
+.active {
+  opacity: 1 !important;
+}
+/* Styles for Join Us button */
+/* Navbar buttons container */
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between buttons */
+  margin-left: auto; /* Align buttons to the right */
+}
+
+/* Common link styles */
+.navbar-buttons .nav-link {
+  color: #ffffff; /* Text color */
+  font-size: 20px; /* Font size */
+  text-decoration: none; /* Remove underline */
+  margin: 0; /* Remove default margin */
+  padding: 10px; /* Add some padding */
+}
+/* Additional styles for the Join Us button */
+.btn-join-us {
+  background-color: #dcf247; /* Background color */
+  color: #000000; /* Text color */
+  padding: 10px 20px; /* Padding */
+  border-radius: 30px; /* Rounded corners */
+  font-size: 20px; /* Font size */
+  text-decoration: none; /* Remove underline */
+  display: flex; /* Flexbox for centering text */
+  align-items: center;
+  justify-content: center;
+  width: 141px;
+  height: 50px;
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Hover effect for Join Us button */
+.btn-join-us:hover {
+  background-color: #c3d7a4; /* Lighter background on hover */
+}
+.suptital{
+    color: #FFFFFF;
+    font-size: 22px;
+    font-family: "LufgaRegular" !important;
+    opacity: 0.7;
+
+}
+.tital{
+    color: #FFFFFF;
+    font-size: 52px;
+    font-family: "LufgaRegular" !important;
+}
+.lesson ul {
+    padding: 0;
+    margin: 0;
+}
+
+.lesson ul li {
+    list-style: none;
+    color: #F5F4F9;
+    font-size: 22px;
+    font-family: "InterRegular";
+    padding: 35px 0; /* 35px padding top and bottom */
+    position: relative; /* Needed for positioning the horizontal line */
+    opacity: 0.9;
+
+}
+
+.lesson ul li::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #C3C8CB;
+    position: absolute;
+    bottom: 0; /* Position the line at the bottom of the li */
+    left: 0;
+}
+
+
+.des{
+    color: #FFFFFF;
+    font-size: 30px;
+    font-family: "LufgaRegular" !important;
+    opacity: 0.7;
+
+}
+.text{
+    color: #FFFFFF;
+    font-size: 13px;
+    font-family: "LufgaRegular" !important;
+    opacity: 0.9;
+
+}
+
+.movee{
+    margin-top: 90px;
+  }
+  video{
+    width: 100% !important;
+}
+  footer{
+    margin-top: 130px;
+    background-color: #000000;
+  }
+  footer h2{
+    text-align: left;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.6) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 59px;
+  font-family: "LufgaRegular" !important;
+
+  }
+  .social-icon {
+    color: #FFFFFF;
+    margin-left: 10px;
+    font-size: 24px; /* Adjust size as needed */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .social-icon:first-child {
+    margin-left: 0;
+  }
+  
+  .social-icon:hover {
+    color: #CCCCCC; /* Optional: Change color on hover */
+  }
+  
+  .navg{
+    color: #FFFFFF;
+    font-size: 21.33px;
+    font-family: "LufgaRegular" !important;
+
+  }
+  .end{
+    color: #FFFFFF;
+    font-size: 30px;
+    font-family: "LufgaRegular" !important;
+  }
+  footer ul li{
+ margin-top: 11px;
+   list-style: none;
+    color: #FFFFFF;
+    font-size: 21.33px;
+    opacity: 0.7;
+    font-family: "LufgaRegular" !important;
+  }
+  .btn-light{
+    background-color: #DCF247 !important;
+    border-color: #DCF247 !important;
+    width: 370px;
+    height: 70px;
+    border-radius: 85px !important;
+    font-family: "LufgaRegular" !important;
+    font-size: 21.33px !important;
+color: #000000;
+
+  }
+  .logo-footer{
+    color: #FFFFFF;
+    font-size: 32.53px;
+    font-family: "LufgaSemiBold" !important;
+  }
+  .top{
+    margin-top: 200px !important;
+  }
+  .custom-hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.8); /* #FFFFFF with 15% opacity */
+    margin-bottom: 20px; /* Space between the hr and the row */
+  }
+    
+
+@media (max-width: 768px) {
+   
+    .navbar-buttons {
+      display: flex;
+      flex-direction: column;
+      margin-top: 15px; /* Space above buttons */
+    }
+  
+    .navbar-buttons .nav-link {
+      font-size: 18px;
+    }
+  
+    .btn-join-us {
+      margin-top: 10px; /* Space above Join Us button */
+    }
+   
+  
+    .navbar-nav {
+      margin-left: 0;
+    }
+    .navbar-brand img {
+      width: 150px !important;
+    }
+    .w{
+        width: 100% !important;
+    }
+    .rempad{
+        padding: 10px !important;
+      }
+      footer h2{
+        margin-top: 50px !important;
+        font-size: 34px;
+      }
+      .btn-light {
+        width: 100%;
+      }
+   
+   
+  }
+  @media (max-width: 992px) {
+    .navbar-buttons {
+      display: none; /* Hide buttons in mobile view */
+    }
+  }
+  
