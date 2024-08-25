@@ -595,6 +595,78 @@ text-align: center;
   .movee{
     margin-top: 90px;
   }
+  footer{
+    margin-top: 130px;
+    background-color: #000000;
+  }
+  footer h2{
+    text-align: left;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.6) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 59px;
+  font-family: "LufgaRegular" !important;
+
+  }
+  .social-icon {
+    color: #FFFFFF;
+    margin-left: 10px;
+    font-size: 24px; /* Adjust size as needed */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .social-icon:first-child {
+    margin-left: 0;
+  }
+  
+  .social-icon:hover {
+    color: #CCCCCC; /* Optional: Change color on hover */
+  }
+  
+  .navg{
+    color: #FFFFFF;
+    font-size: 21.33px;
+    font-family: "LufgaRegular" !important;
+
+  }
+  .end{
+    color: #FFFFFF;
+    font-size: 30px;
+    font-family: "LufgaRegular" !important;
+  }
+  footer ul li{
+ 
+   list-style: none;
+    color: #FFFFFF;
+    font-size: 21.33px;
+    opacity: 0.7;
+    font-family: "LufgaRegular" !important;
+  }
+  .btn-light{
+    background-color: #DCF247 !important;
+    border-color: #DCF247 !important;
+    width: 370px;
+    height: 70px;
+    border-radius: 85px !important;
+    font-family: "LufgaRegular" !important;
+    font-size: 21.33px !important;
+color: #000000;
+
+  }
+  .logo-footer{
+    color: #FFFFFF;
+    font-size: 32.53px;
+    font-family: "LufgaSemiBold" !important;
+  }
+  .top{
+    margin-top: 200px !important;
+  }
+  .custom-hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.8); /* #FFFFFF with 15% opacity */
+    margin-bottom: 20px; /* Space between the hr and the row */
+  }
+    
   @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -680,6 +752,16 @@ text-align: center;
   }
   #myVideo{
     width: 100% !important;
+  }
+  .rempad{
+    padding: 10px !important;
+  }
+  footer h2{
+    margin-top: 50px !important;
+    font-size: 34px;
+  }
+  .btn-light {
+    width: 100%;
   }
 }
 
