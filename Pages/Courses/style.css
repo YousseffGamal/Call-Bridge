@@ -42,6 +42,7 @@ body {
 }
 
 .navbar-nav .nav-link {
+  margin-right: 40px;
   color: #ffffff !important;
   opacity: 0.8;
   font-size: 20px !important;
