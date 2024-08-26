@@ -118,6 +118,7 @@ body {
 }
 
 .navbar-nav .nav-link {
+  margin-right: 40px;
   color: #ffffff !important;
   opacity: 0.8;
   font-size: 20px !important;
@@ -740,6 +741,7 @@ color: #000000;
   }
   .navbar-brand img {
     width: 150px !important;
+    margin-left: 0 !important;
   }
   .move-right {
     right: 0 !important;

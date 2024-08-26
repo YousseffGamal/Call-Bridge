@@ -22,13 +22,13 @@ body {
       src: url("/assets/Fonts/Recoleta/Recoleta-Medium.ttf");
     }
     .navbar {
-        background: transparent;
-        position: absolute !important;
-        width: 100% !important;
-        height: 93px;
-        z-index: 3 !important;
-        font-size: 20px !important;
-    }
+      position: absolute !important;
+      width: 100% !important;
+      height: 93px;
+      z-index: 3 !important;
+      font-size: 20px !important;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 100%) !important;
+  }
 
 .navbar.scrolled {
   background-color: rgba(0, 0, 0, 0.8) !important;
@@ -46,14 +46,17 @@ body {
 }
 
 .navbar-nav .nav-link {
+  margin-right: 40px;
   color: #000000 !important;
   opacity: 0.8;
   font-size: 20px !important;
-  font-family: "LufgaRegular" !important;
+  font-family: "LufgaRegular" ;
 
 }
 .active {
   opacity: 1 !important;
+  font-family: "LufgaSemiBold" !important;
+
 }
 /* Styles for Join Us button */
 /* Navbar buttons container */
@@ -280,6 +283,8 @@ color: #000000;
 .question-section .question {
     text-align: left;
     font-size: 25px;
+    margin-bottom: 30px;
+   
     font-family: "LufgaRegular" !important;
 
 }
@@ -307,6 +312,13 @@ color: #000000;
     color: #FFFFFF;
     padding: 50px 0;
 }
+.task-section .question{
+  color:#FFFFFF ;
+  opacity: 0.8;
+  font-size: 25px;
+  font-family: "LufgaRegular" !important;
+
+}
 .task-section .task-title {
     display: flex;
     align-items: center;
@@ -330,12 +342,15 @@ color: #000000;
     margin: 0 auto;
 }
 .custom-textarea {
-    background-color: rgba(255, 255, 255, 0.2) !important; 
+  margin-top: 46px;
+  background-color: rgba(255, 255, 255, 0.05) !important; /* White with 5% opacity */
+
     width: 1200px !important; 
     max-width: 100% !important;
-    border: 1px solid #757575 !important; 
+    border: 1px solid rgba(255, 255, 255, 0.2) !important; /* White border with 20% opacity */
     color: #FFFFFF !important; 
 }
+
 .Advanced {
     color: #000000;
     padding: 50px 0;
@@ -362,11 +377,17 @@ color: #000000;
 .Advanced .video-container {
     margin: 0 auto;
 }
+.Advanced .question{
+  color: #000000;
+  font-size: 25px;
+  font-family: "LufgaRegular" !important;
+
+}
 .Advanced .custom-textareas{
-    background-color: rgba(255, 255, 255, 0.1) !important; 
-    width: 1200px !important; 
+  background-color: rgba(0, 0, 0, 0.05) !important; /* Black background with 5% opacity */
+  width: 1200px !important; 
     max-width: 100% !important;
-    border: 1px solid #757575 !important; 
+    border: 1px solid rgba(0, 0, 0, 0.2) !important; 
     color: #000000 !important; 
 }
 @media (max-width: 768px) {
@@ -418,6 +439,7 @@ color: #000000;
       }
       .navbar-brand h2 {
         font-size: 20.53px;
+        margin-left: 0 !important;
     }
   }
   @media (max-width: 992px) {
