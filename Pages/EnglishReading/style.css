@@ -193,10 +193,18 @@ opacity: 0.7;
     cursor: pointer;
     z-index: 1;
 }
-.next{
-    color: #000000;
-    font-size: 42px;
-    font-family: "LufgaRegular" !important;
+
+.btn-secondary{
+  margin-top: 120px !important;
+  padding: 0 !important;
+width: 300px !important;
+height: 80px !important;
+border-radius: 85px !important;
+background-color: #000000 !important;
+color: #F5F4F9 !important;
+font-size: 32px !important;
+font-family: "LufgaRegular" !important;
+
 }
   footer{
     margin-top: 130px;
@@ -330,10 +338,10 @@ color: #000000;
     margin: 0 auto;
 }
 .custom-textarea {
-    background-color: rgba(255, 255, 255, 0.2) !important; 
+    background-color: rgba(255, 255, 255, 0.1) !important; 
     width: 1200px !important; 
     max-width: 100% !important;
-    border: 1px solid #757575 !important; 
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
     color: #FFFFFF !important; 
 }
 .Advanced {
@@ -363,13 +371,56 @@ color: #000000;
     margin: 0 auto;
 }
 .Advanced .custom-textareas{
-    background-color: rgba(255, 255, 255, 0.1) !important; 
-    width: 1200px !important; 
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  width: 1200px !important; 
     max-width: 100% !important;
-    border: 1px solid #757575 !important; 
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
     color: #000000 !important; 
 }
+.question-section .task-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.question-section .task-title h3 {
+    margin: 0;
+    color: #000000;
+    font-family: "LufgaRegular" !important;
+    font-size: 42px;
+}
+.question-section .line {
+    flex-grow: 1;
+    border: none;
+    border-top: 2px solid #000000;
+    margin: 0 20px;
+}
+.para{
+  color: #000000;
+    font-family: "LufgaRegular" !important;
+    font-size: 25px;
+}
 @media (max-width: 768px) {
+  .question-section .question {
+
+    font-size: 21px;
+}
+  .question-section .task-title h3 {
+ 
+    font-size: 18px;
+}
+  .task-section .question{
+    font-size: 11px;
+  }
+  .task-section .task-title h3 {
+ 
+    font-size: 18px;
+}
+  .para {
+
+    font-size: 13px;
+}
    
     .navbar-buttons {
       display: flex;
@@ -415,9 +466,13 @@ color: #000000;
       }
       .question-section .btn{
         width: 100%;
+        font-size: 20px;
       }
       .navbar-brand h2 {
         font-size: 20.53px;
+    }
+    .Advanced .task-title h3 {
+      font-size: 18px;
     }
   }
   @media (max-width: 992px) {
