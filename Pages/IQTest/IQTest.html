@@ -1,100 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Call Bridge IQ Test</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark mb-3">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><h2>CALL BRIDGE ACADEMY</h2></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../About/About.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../Courses/Courses.html">Courses</a>
-              </li>
-              <!-- Dropdown for Test -->
-              <li class="nav-item dropdown">
-                <a 
-                  class="nav-link dropdown-toggle active" 
-                  href="#" 
-                  id="testDropdown" 
-                  role="button" 
-                  data-bs-toggle="dropdown" 
-                  aria-expanded="false"
-                >
-                  Test
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="testDropdown">
-                  <li><a class="dropdown-item" href="../TestsEnglishListening/TestsEnglishListening.html">English </a></li>
-                  <li><a class="dropdown-item" href="./IQTest.html">IQ </a></li>
-                </ul>
-              </li>
-            </ul>
-            <!-- Add Join Us Button and Other Links -->
-            <div class="navbar-buttons d-lg-flex d-none">
-              <a class="nav-link login" href="../Login/Login.html">Login</a>
-              <a class="nav-link support" href="../ContactUs/ContactUs.html">Support</a>
-              <a class="btn-join-us" href="../Login/Login.html">Join Us</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-      
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Call Bridge IQ Test</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    /* Basic Styles for hiding elements */
+    .d-none {
+      display: none;
+    }
 
-    <!-- Landing Section -->
-    <section class="landing">
-      <div class="landing-content" style="margin-top: 5px">
-        <p class="suptitle">TESTS</p>
-        <h1 class="title">IQ Test </h1>
-        <p class="suptitle">PAGE 1 </p>
+    /* Animation Styles */
+    .questions-set {
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    .fade-in {
+      opacity: 1;
+    }
+
+    .fade-out {
+      opacity: 0;
+    }
+
+    /* Slide animation */
+    .slide-left {
+      transform: translateX(100%);
+    }
+
+    .slide-right {
+      transform: translateX(-100%);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark mb-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><h2>CALL BRIDGE ACADEMY</h2></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../About/About.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Courses/Courses.html">Courses</a>
+          </li>
+          <!-- Dropdown for Test -->
+          <li class="nav-item dropdown">
+            <a 
+              class="nav-link dropdown-toggle active" 
+              href="#" 
+              id="testDropdown" 
+              role="button" 
+              data-bs-toggle="dropdown" 
+              aria-expanded="false"
+            >
+              Test
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="testDropdown">
+              <li><a class="dropdown-item" href="../TestsEnglishListening/TestsEnglishListening.html">English </a></li>
+              <li><a class="dropdown-item" href="./IQTest.html">IQ </a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Add Join Us Button and Other Links -->
+        <div class="navbar-buttons d-lg-flex d-none">
+          <a class="nav-link login" href="../Login/Login.html">Login</a>
+          <a class="nav-link support" href="../ContactUs/ContactUs.html">Support</a>
+          <a class="btn-join-us" href="../Login/Login.html">Join Us</a>
+        </div>
       </div>
-    </section>
- 
-    <!-- Question Section -->
-    <section class="question-section" style="margin-top: 115px;">
-      
-      <div class="container">
-    
+    </div>
+  </nav>
+
+  <!-- Landing Section -->
+  <section class="landing">
+    <div class="landing-content" style="margin-top: 5px">
+      <p class="suptitle">TESTS</p>
+      <h1 class="title">IQ Test </h1>
+      <p class="suptitle" id="pageTitle">PAGE 1</p>
+    </div>
+  </section>
+
+  <!-- Question Section -->
+  <section class="question-section">
+    <div class="container">
+      <!-- Set of Questions 1 -->
+      <div id="questionsSet1" class="questions-set fade-in">
         <div class="row">
           <div class="col text-center">
             <p class="para">
-                Question 1: <br>
-                A man is looking at a picture of someone. His friend asks, “Who is it you’re looking at?” The <br>
-                man replies, “Brothers and sisters, I have none. The father of that person in the picture is my <br>
-                father’s son.””
+              Question 1: <br>
+              A man is looking at a picture of someone. His friend asks, “Who is it you’re looking at?” The <br>
+              man replies, “Brothers and sisters, I have none. The father of that person in the picture is my <br>
+              father’s son.”
             </p>
           </div>
         </div>
@@ -106,143 +133,272 @@
               <button class="btn">b) His brother</button>
               <button class="btn">c) His father</button>
               <button class="btn"> d) Himself</button>
-
             </div>
           </div>
         </div>
         <div class="col text-center" style="margin-top: 150px;">
-            <p class="para">
-                Question 2: <br>
-                A plane crashes on the border of the U.S. and Canada.
-            </p>
-          </div>
-        <div class="row" style="margin-top: 70px;">
-            <div class="col">
-              <h3 class="question">Who is the person in the picture?</h3>
-              <div class="btn-container">
-                <button class="btn">a) Canada</button>
-                <button class="btn">b) U.S.</button>
-                <button class="btn">c) Both</button>
-                <button class="btn"> d) Survivors are not buried</button>
-  
-              </div>
-            </div>
-          </div>
-          <div class="col text-center" style="margin-top: 150px;">
-            <p class="para">
-                Question 3: <br>
-                A man walks into a bar and orders a drink. He then leaves the bar and walks into a forest. <br> 
-                After spending a night in the forest, he returns to the bar and orders the same drink. The  <br>
-                bartender gives him the drink and says, “This is your last drink, you can’t come back here.” <br>
-            </p>
-          </div>
-        <div class="row" style="margin-top: 70px;">
-            <div class="col">
-              <h3 class="question">Why is That?</h3>
-              <div class="btn-container">
-                <button class="btn">a) He was not allowed to return to the bar</button>
-                <button class="btn">b) He is a known troublemaker</button>
-                <button class="btn">c) He was trying to escape from a forest</button>
-                <button class="btn"> d) He was banned from the bar</button>
-  
-              </div>
-            </div>
-          </div>
-          <div class="col text-center" style="margin-top: 150px;">
-            <p class="para">
-                Question 4: <br>
-                A man is in a room with three switches. Each switch controls one of three light bulbs in <br>
-                another room. He can only enter the room with the bulbs once.
-            </p>
-          </div>
-        <div class="row" style="margin-top: 70px;">
-            <div class="col">
-              <h3 class="question">How can he determine which switch controls which bulb?</h3>
-              <div class="btn-container">
-                <button style="height: 100%;" class="btn">a) Turn on the first switch, leave it on for a while, then turn it off and turn on the second switch. Enter the bulb room. The bulb that is on is controlled by the second switch, the bulb that is warm is controlled by the first switch, and the bulb that is off and cold is controlled by the third switch.</button>
-                <button class="btn">b) Turn on all switches and check which bulbs are on.</button>
-                <button class="btn">c) Turn on each switch for 5 minutes and then check.</button>
-                <button class="btn">d) Leave all switches off and enter the room with the bulbs.</button>
-  
-              </div>
-            </div>
-          </div>
-          <div class="col text-center" style="margin-top: 150px;">
-            <p class="para"> 
-                Question 5: <br>
-                You see a house with a red door, blue windows, and a green roof.
-            </p>
-          </div>
-        <div class="row" style="margin-top: 70px;">
-            <div class="col">
-              <h3 class="question">What color is the house?</h3>
-              <div class="btn-container">
-                <button style="height: 100%;" class="btn">a) Red</button>
-                <button class="btn">b) Blue</button>
-                <button class="btn">c) Green</button>
-                <button class="btn">d) White</button>
-  
-              </div>
-            </div>
-          </div>
-      </div>
-    </section>
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <p class="next text-center">Next <span><img src="/assets/images/contact us.png" alt=""></span></p>
-            </div>
+          <p class="para">
+            Question 2: <br>
+            A plane crashes on the border of the U.S. and Canada.
+          </p>
         </div>
-    </div>
-</section>
-
-    <!-- Footer -->
-    <footer>
-      <div class="container-fluid rempad ">
-        <div class="row ">
-          <div class="col-md-6 col-12 " style="margin-top: 96px;">
-            <h2>The Ultimate Learning <br> Hub to Unlock Your <br> Full Potential</h2>
-          </div>
-          <div class="col-md-3 col-12 "  style="margin-top: 96px;">
-            <p class="navg">Navigation</p>
-            <ul style="padding: 0">
-              <li>Home</li>
-              <li>About</li>
-              <li>Courses</li>
-              <li>Tests</li>
-            </ul>
-          </div>
-          <div class="col-md-3 col-12" style="margin-top: 96px;">
-            <p class="end">Still Have Questions?</p>
-            <button type="button" class="btn btn-light">
-              Contact Us
-              <span
-                ><img
-                  class="lastarrow"
-                  src="./assets/images/contact us.png"
-                  alt=""
-              /></span>
-            </button>
-          </div>
-        </div>
-
-        <div class="row top">
-          <hr class="custom-hr mb-5" />
+        <div class="row" style="margin-top: 70px;">
           <div class="col">
-            <p class="logo-footer">CALL BRIDGE ACADEMY</p>
+            <h3 class="question">Who is the person in the picture?</h3>
+            <div class="btn-container">
+              <button class="btn">a) Canada</button>
+              <button class="btn">b) U.S.</button>
+              <button class="btn">c) Both</button>
+              <button class="btn"> d) Survivors are not buried</button>
+            </div>
           </div>
-          <div class="col text-end">
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="col text-center" style="margin-top: 150px;">
+          <p class="para">
+            Question 3: <br>
+            A man walks into a bar and orders a drink. He then leaves the bar and walks into a forest. <br> 
+            After spending a night in the forest, he returns to the bar and orders the same drink. The  <br>
+            bartender gives him the drink and says, “This is your last drink, you can’t come back here.”
+          </p>
+        </div>
+        <div class="row" style="margin-top: 70px;">
+          <div class="col">
+            <h3 class="question">Why is That?</h3>
+            <div class="btn-container">
+              <button class="btn">a) He was not allowed to return to the bar</button>
+              <button class="btn">b) He is a known troublemaker</button>
+              <button class="btn">c) He was trying to escape from a forest</button>
+              <button class="btn"> d) He was banned from the bar</button>
+            </div>
+          </div>
+        </div>
+        <div class="col text-center" style="margin-top: 150px;">
+          <p class="para">
+            Question 4: <br>
+            A man is in a room with three switches. Each switch controls one of three light bulbs in <br>
+            another room. He can only enter the room with the bulbs once.
+          </p>
+        </div>
+        <div class="row" style="margin-top: 70px;">
+          <div class="col">
+            <h3 class="question">How can he determine which switch controls which bulb?</h3>
+            <div class="btn-container">
+              <button style="height: 100%;" class="btn">a) Turn on the first switch, leave it on for a while, then turn it off and turn on the second switch. Enter the bulb room. The bulb that is on is controlled by the second switch, the bulb that is warm is controlled by the first switch, and the bulb that is off and cold is controlled by the third switch.</button>
+              <button class="btn">b) Turn on all switches and check which bulbs are on.</button>
+              <button class="btn">c) Turn on each switch for 5 minutes and then check.</button>
+              <button class="btn">d) Leave all switches off and enter the room with the bulbs.</button>
+            </div>
+          </div>
+        </div>
+        <div class="col text-center" style="margin-top: 150px;">
+          <p class="para"> 
+            Question 5: <br>
+            You see a house with a red door, blue windows, and a green roof.
+          </p>
+        </div>
+        <div class="row" style="margin-top: 70px;">
+          <div class="col">
+            <h3 class="question">What color is the house?</h3>
+            <div class="btn-container">
+              <button style="height: 100%;" class="btn">a) Red</button>
+              <button class="btn">b) Blue</button>
+              <button class="btn">c) Green</button>
+              <button class="btn">d) White</button>
+            </div>
           </div>
         </div>
       </div>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+      <!-- Set of Questions 2 -->
+      <div id="questionsSet2" class="questions-set d-none">
+        <div class="row">
+          <div class="col text-center">
+            <p class="para">
+              Question 6: <br>
+              A father and his son are in a car accident and are rushed to the hospital. The father dies instantly, but the son is taken to surgery. The surgeon looks at the boy and says, “I can’t operate on this boy; he’s my son.”
+            </p>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 70px;">
+          <div class="col">
+            <h3 class="question">Who is the surgeon?</h3>
+            <div class="btn-container">
+              <button class="btn">a) The father’s brother</button>
+              <button class="btn">b) The mother</button>
+              <button class="btn">c) The boy’s uncle</button>
+              <button class="btn">d) A family friend</button>
+            </div>
+          </div>
+        </div>
+        <div class="col text-center" style="margin-top: 150px;">
+          <p class="para">
+            Question 7: <br>
+            If you were in a race and you passed the person in second place, what place would you be in now?
+          </p>
+        </div>
+        <div class="row" style="margin-top: 70px;">
+          <div class="col">
+            <h3 class="question">What place would you be in?</h3>
+            <div class="btn-container">
+              <button class="btn">a) First</button>
+              <button class="btn">b) Second</button>
+              <button class="btn">c) Third</button>
+              <button class="btn">d) Fourth</button>
+            </div>
+          </div>
+        </div>
+        <div class="col text-center" style="margin-top: 150px;">
+          <p class="para">
+            Question 8: <br>
+            You have a barrel of oil and a candle. How can you light the candle without using matches or a lighter?
+          </p>
+        </div>
+        <div class="row" style="margin-top: 70px;">
+          <div class="col">
+            <h3 class="question">What is your solution?</h3>
+            <div class="btn-container">
+              <button class="btn">a) Pour oil on the candle and light it</button>
+              <button class="btn">b) Use the oil to ignite the candle</button>
+              <button class="btn">c) Drop the candle into the barrel</button>
+              <button class="btn">d) Use a piece of paper to light the candle</button>
+            </div>
+          </div>
+        </div>
+        <div class="col text-center" style="margin-top: 150px;">
+          <p class="para">
+            Question 9: <br>
+            How many months have 28 days?
+          </p>
+        </div>
+        <div class="row" style="margin-top: 70px;">
+          <div class="col">
+            <h3 class="question">How many months?</h3>
+            <div class="btn-container">
+              <button class="btn">a) One</button>
+              <button class="btn">b) Two</button>
+              <button class="btn">c) Seven</button>
+              <button class="btn">d) All twelve</button>
+            </div>
+          </div>
+        </div>
+        <div class="col text-center" style="margin-top: 150px;">
+          <p class="para">
+            Question 10: <br>
+            A man is traveling to a town with his family. They arrive at a hotel that has no rooms available. The man insists on staying, so the hotel manager agrees to let them stay in a special room. When the family enters the room, they find it empty. What is the special room?
+          </p>
+        </div>
+        <div class="row" style="margin-top: 70px;">
+          <div class="col">
+            <h3 class="question">What is the special room?</h3>
+            <div class="btn-container">
+              <button class="btn">a) A room with a view</button>
+              <button class="btn">b) A room with no furniture</button>
+              <button class="btn">c) A room with a unique design</button>
+              <button class="btn">d) A room with a secret entrance</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Next Button -->
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <p class="next">
+                Next <span><img src="/assets/images/contact us.png" alt="" /></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="container-fluid rempad " >
+      <div class="row rempad " style="padding-top: 96px; padding-left: 110px; ">
+        <div class="col-md-6 col-12 ">
+          <h2>The Ultimate Learning <br> Hub to Unlock Your <br> Full Potential</h2>
+        </div>
+        <div class="col-md-3 col-12 ">
+          <p class="navg">Navigation</p>
+          <ul style="padding: 0">
+            <li>Home</li>
+            <li>About</li>
+            <li>Courses</li>
+            <li>Tests</li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-12 ">
+          <p class="end">Still Have Questions?</p>
+          <button type="button" class="btn btn-light">
+            Contact Us
+            <span
+              ><img
+                class="lastarrow"
+                src="./assets/images/contact us.png"
+                alt=""
+            /></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="row top">
+        <hr class="custom-hr mb-5" />
+        <div class="col">
+          <p class="logo-footer">CALL BRIDGE ACADEMY</p>
+        </div>
+        <div class="col text-end">
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <script>
+   document.addEventListener('DOMContentLoaded', function () {
+      const nextButton = document.querySelector('.next');
+      const questionsSets = document.querySelectorAll('.questions-set');
+      const pageTitle = document.getElementById('pageTitle');
+      let currentIndex = 0;
+
+      nextButton.addEventListener('click', function () {
+        const currentSet = questionsSets[currentIndex];
+        currentIndex = (currentIndex + 1) % questionsSets.length; // Loop through sets
+        const nextSet = questionsSets[currentIndex];
+
+        // Update page title
+        pageTitle.textContent = `PAGE ${currentIndex + 1}`;
+
+        // Apply fade-out animation to current set
+        currentSet.classList.add('fade-out');
+
+        // Apply fade-in animation to next set
+        nextSet.classList.remove('d-none');
+        nextSet.classList.add('fade-in');
+
+        // After fade-out animation, hide current set
+        setTimeout(() => {
+          currentSet.classList.add('d-none');
+          currentSet.classList.remove('fade-out');
+        }, 500); // Duration of the fade-out animation
+
+        // Optional: Add a delay for slide-in effect
+        nextSet.classList.add('slide-left');
+        setTimeout(() => {
+          nextSet.classList.remove('slide-left');
+        }, 50); // Small delay to start the slide effect
+
+        // Scroll to the top of the page after animations
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 500); // Delay to allow animations to finish before scrolling
+      });
+    });
+ </script>
+</body>
 </html>
- 

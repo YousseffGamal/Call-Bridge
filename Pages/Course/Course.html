@@ -5,28 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Call Bridge Course</title>
     <link rel="stylesheet" href="./style.css">
-
-    <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-  />
-
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-       <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"
           ><img
-            style="width: 100%"
+            style="width: 100%;margin-left: 110px;"
             src="/assets/images/CALL BRIDGE ACADEMY.png"
             alt=""
         /></a>
@@ -44,16 +33,29 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="/index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="./Courses.html">Courses</a>
+              <a class="nav-link" href="../About/About.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="../Courses/Courses.html">Courses</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+            <li class="nav-item dropdown">
+              <a 
+                class="nav-link dropdown-toggle " 
+                href="#" 
+                id="testDropdown" 
+                role="button" 
+                data-bs-toggle="dropdown" 
+                aria-expanded="false"
+              >
+                Test
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="testDropdown">
+                <li><a class="dropdown-item" href="../TestsEnglishListening/TestsEnglishListening.html">English </a></li>
+                <li><a class="dropdown-item" href="../IQTest/IQTest.html">IQ </a></li>
+              </ul>
             </li>
           </ul>
           <!-- Add Join Us Button and Other Links -->
@@ -66,91 +68,97 @@
       </div>
     </nav>
     <!-- start of course -->
-     <section class="lesson">
+    <section class="lesson">
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-4 col-12">
                     <p class="suptital">COURSE MATERIAL</p>
                     <h3 class="tital">Written English <br> Course</h3>
-                    <ul >
-                        <li>Course Welcome</li>
-                        <li>Why Study Written English Course</li>
-                        <li>About This Course</li>
-                        <li>About the Assignments</li>
-                        <li>Course Tools</li>
-                        <li>Lesson 1</li>
-                        <li>Lesson 2</li>
-                        <li>Lesson 3</li>
+                    <ul id="courseList">
+                        <li data-video="/assets/Videos/welcome.mp4" data-description="Welcome to the course! Here we will introduce you to the fundamentals of Written English." data-text="At call bridge academy, our mission is to make high-quality education accessible to everyone, everywhere. We believe that learning should be a lifelong journey, and we are dedicated to empowering individuals to reach their full potential through flexible and inclusive learning opportunities.">Course Welcome</li>
+                        <li data-video="/assets/Videos/why-study.mp4" data-description="Discover the importance of studying Written English and how it can benefit your communication skills." data-text="Studying Written English helps enhance your communication skills, which are crucial for both personal and professional growth. Our course is designed to improve your writing abilities effectively.">Why Study Written English Course</li>
+                        <li data-video="/assets/Videos/about-course.mp4" data-description="Learn more about what this Written English course offers and what you can expect to gain." data-text="This course covers various aspects of Written English, providing you with the tools and knowledge needed to excel. From basics to advanced topics, our course is comprehensive and insightful.">About This Course</li>
+                        <li data-video="/assets/Videos/about-assignments.mp4" data-description="Understand the assignments you'll be working on and how they will help you improve your skills." data-text="Our assignments are designed to reinforce learning and enhance your skills. You'll have practical tasks that help you apply what you've learned in real-world scenarios.">About the Assignments</li>
+                        <li data-video="/assets/Videos/course-tools.mp4" data-description="Get familiar with the tools and resources you'll use throughout the Written English course." data-text="Explore the various tools and resources that will assist you throughout the course. These include writing aids, reference materials, and interactive activities.">Course Tools</li>
+                        <li data-video="/assets/Videos/lesson1.mp4" data-description="Dive into Lesson 1 where we cover the basics of Written English." data-text="Lesson 1 introduces the foundational concepts of Written English, setting the stage for more advanced topics in subsequent lessons.">Lesson 1</li>
+                        <li data-video="/assets/Videos/lesson2.mp4" data-description="In Lesson 2, we explore advanced topics and techniques in Written English." data-text="Lesson 2 builds upon the basics, diving into more complex aspects of writing and providing you with advanced techniques to refine your skills.">Lesson 2</li>
+                        <li data-video="/assets/Videos/lesson3.mp4" data-description="Lesson 3 focuses on practical applications and real-world examples of Written English." data-text="Lesson 3 emphasizes practical application, with real-world examples to help you see how Written English is used effectively in various contexts.">Lesson 3</li>
                     </ul>
-
-
                 </div>
-                <div class="col-md-8 col-12">
-                    <video controls  style="border-radius: 23.69px;" src="/assets/Videos/second.mp4"></video>
-                    <p class="des">Description</p>
-                    <p class="text">At call bridge academy, our mission is to make high-quality education accessible to everyone, everywhere. We believe that learning <br>
-                        should be a lifelong journey, and we are dedicated to empowering individuals to reach their full potential through flexible and <br>
-                        inclusive learning opportunities.</p>
-
+                <div class="col-md-8 col-12" >
+                    <video id="courseVideo" controls style="border-radius: 23.69px;" src="/assets/Videos/welcome.mp4"></video>
+                    <p id="videoDescription" class="des">Description</p>
+                    <p id="courseText" class="text">At call bridge academy, our mission is to make high-quality education accessible to everyone, everywhere. We believe that learning should be a lifelong journey, and we are dedicated to empowering individuals to reach their full potential through flexible and inclusive learning opportunities.</p>
                 </div>
             </div>
         </div>
-     </section>
+    </section>
 
-    
-        <!-- start of footer section -->
-        <footer>
-            <div class="container-fluid rempad" style="padding: 100px; padding-bottom: 0;" >
-              <div class="row" >
+    <!-- start of footer section -->
+    <footer>
+        <div class="container-fluid rempad" style="padding: 100px; padding-bottom: 0;">
+            <div class="row">
                 <div class="col-md-6 col-12">
-                  <h2>
-                    The Ultimate Learning <br />
-                    Hub to Unlock Your <br />
-                    Full Potential
-                  </h2>
-                </div>
-                <div class="col-md-3 col-12" >
-                  <p class="navg">Navigation</p>
-                  <ul style="padding: 0;">
-                    <li >Home</li>
-                    <li>About</li>
-                    <li>Courses</li>
-                    <li>Tests</li>
-                  </ul>
+                    <h2>The Ultimate Learning <br />Hub to Unlock Your <br />Full Potential</h2>
                 </div>
                 <div class="col-md-3 col-12">
-                  <p class="end">Still Have Questions?</p>
-                  <button type="button" class="btn btn-light">Contact Us <span><img class="lastarrow" src="./assets/images/contact us.png" alt=""></span></button>
-      
+                    <p class="navg">Navigation</p>
+                    <ul style="padding: 0;">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Courses</li>
+                        <li>Tests</li>
+                    </ul>
                 </div>
-              </div>
-      
-              <div class="row top">
-                <hr class="custom-hr mb-5">
-      
-                <div class="col">
-                  <!-- Content for the first column -->
-                  <p class="logo-footer">CALL BRIDGE ACADEMY</p>
+                <div class="col-md-3 col-12">
+                    <p class="end">Still Have Questions?</p>
+                    <button type="button" class="btn btn-light">Contact Us <span><img class="lastarrow" src="./assets/images/contact us.png" alt=""></span></button>
                 </div>
-                <div class="col text-end ">
-                  <!-- Social media icons with gap and color -->
-                  <a href="#" class="social-icon">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a href="#" class="social-icon">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a href="#" class="social-icon">
-                    <i class="fab fa-tiktok"></i>
-                  </a>
-                  <a href="#" class="social-icon">
-                    <i class="fab fa-youtube"></i>
-                  </a>
-                </div>
-              </div>
             </div>
-          </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+            <div class="row top">
+                <hr class="custom-hr mb-5">
+                <div class="col">
+                    <p class="logo-footer">CALL BRIDGE ACADEMY</p>
+                </div>
+                <div class="col text-end">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const courseListItems = document.querySelectorAll('#courseList li');
+            const videoElement = document.getElementById('courseVideo');
+            const descriptionElement = document.getElementById('videoDescription');
+            const courseTextElement = document.getElementById('courseText');
+
+            courseListItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    const videoSrc = this.getAttribute('data-video');
+                    const description = this.getAttribute('data-description');
+                    const text = this.getAttribute('data-text');
+
+                    videoElement.src = videoSrc;
+                    descriptionElement.innerText = description;
+                    courseTextElement.innerText = text;
+                });
+            });
+        });
+    </script>
 </body>
 </html>

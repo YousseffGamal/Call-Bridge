@@ -1,5 +1,6 @@
 body {
     background-color: #f5f4f9 !important ;
+    overflow-x: hidden;
   }
   @font-face {
     font-family: "LufgaSemiBold";
@@ -288,7 +289,7 @@ color: #000000;
  
     
   .question-section {
-    margin-top: 50px;
+    margin-top: 115px;
 }
 .question-section .question {
     margin-top: 70px;
