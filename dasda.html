@@ -1,145 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Font Awesome -->
+
     <style>
-:root {
-    --themeht-primary2-color: #103ce7;
-    --themeht-secondary2-color: #64e9ff;
-    --themeht-white-color: #ffffff;
-    --themeht-secondary-font-family: "Archivo", sans-serif;
-}
+      body {
+        background-color: #000000;
+      }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--themeht-secondary-font-family);
-}
+      .container {
+        margin-top: 100px;
+      }
 
-.garb {
-    margin-top: 200px;
-    padding: 30px 0;
-    height: 100% !important;
-    transform: scale(1.1) rotate(-10deg);
-    overflow-x: hidden !important;
-}
+      .card-img-top {
+        position: relative;
+        overflow: hidden;
+      }
 
-.marquee-container {
-    max-width: 100% !important;
-    width: 100% !important;
-    overflow: hidden;
-    position: relative;
-    height: 300px; /* Adjust image height */
-    width: 449px;
-}
+      .card-img-top img {
+        border-radius: 20.74px !important;
+      }
 
-.marquee-images {
-    display: flex;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 200%; /* Ensure width is enough to accommodate all images twice */
-}
+      .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.1
+        ); /* Dark overlay with 10% opacity */
+      }
 
-.marquee-images img {
-    height: 300px; /* Adjust image height */
-    width: 449px;
-    display: inline-block;
-    margin-right: 20px; /* Space between images */
-    transform: rotate(-5deg); /* Tilt the images */
-}
+      .image-fade {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 140%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 10%,
+          rgba(17, 17, 17, 1) 100%
+        );
+      }
 
-/* Animation for the first marquee */
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%); /* Scrolls the width of half the container */
-    }
-}
+      .card {
+        border: 0.1px solid #dcf247 !important; /* Even thinner border with 0.1px width */
+        background-color: #111111;
+        border-radius: 20.74px !important;
+      }
 
-.marquee-container:first-of-type .marquee-images {
-    animation: marquee 10s linear infinite;
-}
+      .card-body {
+        position: relative;
+        padding-top: 100px; /* Adjust to make space for the title */
+      }
 
-/* Animation for the second marquee, moving in the opposite direction */
-@keyframes marquee-reverse {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(50%); /* Scrolls the width of half the container in the opposite direction */
-    }
-}
+      .card-title {
+        position: absolute;
+        bottom: 110%; /* Distance from the bottom of the card body */
+        left: 22%; /* Distance from the left edge */
+        color: #ffffff; /* Text color */
+        font-size: 34.84px; /* Adjust font size as needed */
+      }
 
-.marquee-container:last-of-type .marquee-images {
-    animation: marquee-reverse 10s linear infinite;
-}
+      .card-text {
+        position: absolute;
+        bottom: 100%; /* Distance from the bottom of the card body */
+        left: 35%; /* Distance from the left edge */
+        color: #ffffff; /* Text color */
+        font-size: 16px; /* Adjust font size as needed */
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      .dis {
+        text-align: center;
+        color: #ffffff; /* Text color */
+        font-size: 15px; /* Adjust font size as needed */
+        opacity: 0.7;
+        position: relative;
+        bottom: 80px;
+      }
+      .Frame {
+        position: relative;
+        bottom: 70px;
+        left: 30%; /* Distance from the left edge */
+      }
+      .underimage {
+        position: relative;
+        bottom: 55px;
+        left: 35%; /* Distance from the left edge */
+        color: #ffffff; /* Text color */
+        font-size: 15px; /* Adjust font size as needed */
+        opacity: 0.7;
+      }
+      .btn-success {
+        background-color: transparent;
+        border-color: #dcf247;
+        color: #dcf247;
+        border-radius: 70.51px;
+        width: 100% !important;
+        height: 58.06px;
+      }
+      .btn-secondary {
+        background-color: #dcf247;
+        border-color: #dcf247;
+        color: #000000;
+        border-radius: 70.51px;
+        width: 100% !important;
+        height: 58.06px;
+      }
+      @media (max-width: 768px) {
+        .card-title {
+          font-size: 19.84px;
+        }
+        .card-text {
+          bottom: 104%;
+          left: 28%;
 
-.login-form-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
+          font-size: 12px;
+        }
+        .dis {
+          font-size: 10px;
 
+          bottom: 93px;
+        }
+        .Frame {
+    bottom: 85px;
+    left: 9%;
+}
+.underimage {
+   
+    left: 17%;
+ 
+}
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="container-fluid">
 
-  <div class="container-fluid">
-    <div class="row">
-        <!-- Left Column with Scrolling Images -->
-        <div class="col-md-6 garb">
-            <div class="marquee-container">
-                <div class="marquee-images">
-                    <!-- First set of images -->
-                    <img src="./assets/images/Slider/Frame 28.png" alt="Image 1" />
-                    <img src="./assets/images/Slider/Frame 29.png" alt="Image 2" />
-                    <img src="./assets/images/Slider/medium-shot-people-sitting-library.png" alt="Image 3" />
-                    <!-- Duplicate the images -->
-                    <img src="./assets/images/Slider/Frame 28.png" alt="Image 1" />
-                    <img src="./assets/images/Slider/Frame 29.png" alt="Image 2" />
-                    <img src="./assets/images/Slider/medium-shot-people-sitting-library.png" alt="Image 3" />
-                </div>
+      <div class="row">
+        <div class="col-md-6 col-12">
+          <div class="card" style="width: 100%">
+            <div class="card-img-top" style="position: relative">
+              <img
+                src="./assets/images/young-woman-working-laptop-library 1.png"
+                alt="Card image cap"
+                style="width: 100%; display: block"
+              />
+              <div class="image-overlay"></div>
+              <!-- Dark overlay -->
+              <div class="image-fade"></div>
+              <!-- Fade effect -->
             </div>
-            <div class="marquee-container">
-              <div class="marquee-images">
-                <!-- Second set of images, same as above -->
-                <img src="./assets/images/Slider/Frame 28.png" alt="Image 1" />
-                <img src="./assets/images/Slider/Frame 29.png" alt="Image 2" />
-                <img src="./assets/images/Slider/medium-shot-people-sitting-library.png" alt="Image 3" />
-                <!-- Duplicate the images -->
-                <img src="./assets/images/Slider/Frame 28.png" alt="Image 1" />
-                <img src="./assets/images/Slider/Frame 29.png" alt="Image 2" />
-                <img src="./assets/images/Slider/medium-shot-people-sitting-library.png" alt="Image 3" />
+            <div class="card-body">
+              <h5 class="card-title">
+                <span style="color: #dcf247">Written</span> English Course
+              </h5>
+              <p class="card-text">
+                <span style="color: #dcf247"
+                  >4.8 <i class="fa-solid fa-star"></i
+                ></span>
+                <span style="opacity: 0.7"> 500+ Students Reviews</span>
+              </p>
+              <p class="dis">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod <br />
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                minim <br />
+                veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea <br />
+                commodo consequat.
+              </p>
+              <img class="Frame" src="./assets/images/Frame 8.png" alt="" />
+              <p class="underimage">Taught By 5 World-Class Tutors</p>
+              <div
+                class="mb-3"
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 10px;
+                "
+              >
+                <button type="button" class="btn btn-success">
+                  Watch Free Class
+                </button>
+
+                <button type="button" class="btn btn-secondary">
+                  Enroll Now
+                </button>
               </div>
+            </div>
           </div>
         </div>
-        
-        <!-- Right Column with Login Form -->
-        <div class="col-md-6 login-form-container">
-            <div class="login-form">
-                <h2>Login</h2>
-                <form>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                </form>
+        <div class="col-md-6 col-12">
+          <div class="card" style="width: 100%">
+            <div class="card-img-top" style="position: relative">
+              <img
+                src="./assets/images/young-woman-working-laptop-library 1.png"
+                alt="Card image cap"
+                style="width: 100%; display: block"
+              />
+              <div class="image-overlay"></div>
+              <!-- Dark overlay -->
+              <div class="image-fade"></div>
+              <!-- Fade effect -->
             </div>
-        </div>
-    </div>
-</div>
+            <div class="card-body">
+              <h5 class="card-title">
+                <span style="color: #dcf247">Written</span> English Course
+              </h5>
+              <p class="card-text">
+                <span style="color: #dcf247"
+                  >4.8 <i class="fa-solid fa-star"></i
+                ></span>
+                <span style="opacity: 0.7"> 500+ Students Reviews</span>
+              </p>
+              <p class="dis">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod <br />
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                minim <br />
+                veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea <br />
+                commodo consequat.
+              </p>
+              <img class="Frame" src="./assets/images/Frame 8.png" alt="" />
+              <p class="underimage">Taught By 5 World-Class Tutors</p>
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 10px;
+                "
+              >
+                <button type="button" class="btn btn-success">
+                  Watch Free Class
+                </button>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+                <button type="button" class="btn btn-secondary">
+                  Enroll Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
